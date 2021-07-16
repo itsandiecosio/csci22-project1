@@ -1,0 +1,348 @@
+/*
+    Developer's Note    
+    The fonts used in this styles folder are for personal use. 
+    Kindly refrain from sharing the fonts.
+    Wasn't able to animate the transitions for the menu pages (it should slide in and out).
+    Wasn't able to create an icon library or a design system on short notice, 
+        hence the poor design system and lots of icon assets in the folder.
+        hence the multiple CSS style sheets (yes, I'm embarrassed, it's very unorganized).
+*/
+
+@font-face {
+    font-family: "Specify";
+    src: url("fonts/SpecifyPERSONAL-ExpBlack.ttf");
+}
+
+@font-face {
+    font-family: "Specify Thin";
+    src: url("fonts/SpecifyPERSONAL-ExExpBold.ttf");
+}
+
+@font-face {
+    font-family: "Specify Bold";
+    src: url("fonts/SpecifyPERSONAL-ExpBold.ttf")
+}
+
+html {
+    cursor: url('assets/CursorRegular.svg'), auto;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 1fr 4fr 1fr;
+    grid-template-areas:
+    "h1 logo h1"
+    "h2 main h2"
+    "h1 main h1";
+    margin: 5px;
+}
+
+h1 {
+    font-family: "Specify";
+    font-size: 24px;
+    color: #FF1369;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+#navbar {
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+}
+
+h1:hover {
+    text-decoration: underline;
+    transition: 1s;
+}
+
+h2 {
+    font-family: "Specify Thin";
+    font-size: 14px;
+    color: #FF1369;
+    margin: 200px 0px 200px 0px;
+    padding: 0;
+}
+
+main {
+    display: inline-grid;
+    grid-template-columns: 2fr 3fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    column-gap: 40px;
+    height: 450px;
+    overflow: auto;
+    align-items: center;
+}
+
+.customerdetails {
+    width: 430px;
+}
+
+h3 {
+    display: block;
+    font-family: "Specify Bold";
+    color: #FF1369;
+    text-align: left;
+    font-size: 20px;
+    border: 1px solid #fff;
+}
+
+a:hover {
+    text-decoration: underline;
+    color:#FF1369;
+    cursor: url('assets/CursorCrosshair.svg'), auto;
+}
+
+p {
+    display: block;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: #1F1E25;
+    margin: 2px;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    width: 1px;
+    background: #FF1369;
+    border-radius: 25px;
+}
+
+h4 {
+    font-family: "Specify Bold";
+    font-size: 16px;
+    color:#FF1369;
+    padding: 16px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#id {
+    display: inline-block;
+    object-fit: contain;
+}
+
+th {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: #FF1369;
+    text-align: left;
+}
+
+td {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: #1F1E25;
+}
+
+#order-details {
+    width: 500px;
+    height: 75px;
+}
+
+.add-customer-input {
+    font-family: "Montserrat";
+    font-size: 16px;
+    border: 1px solid #F0DAE2;
+    border-radius: 25px;
+    padding-top: 10px;
+    padding-left: 20px;
+    color: #1F1E25;
+    margin-right: 50px;
+    height: 40px;
+    max-width: 337px;
+    max-height: 30px;
+    vertical-align: middle;
+}
+
+.add-customer-input:hover {
+    cursor: url('assets/CursorCaret.svg'), auto;
+}
+
+/* 
+    To remove the outline when the input is focused
+    Reference: https://stackoverflow.com/questions/1457849/how-to-remove-the-border-highlight-on-an-input-text-element
+*/
+.add-customer-input:focus {
+    outline-width: 0;
+}
+
+input[type="text" i] {
+    padding: 0px 0px 0px 20px;
+}
+
+.add-item-input {
+    font-family: "Montserrat";
+    font-size: 16px;
+    border: 1px solid #F0DAE2;
+    border-radius: 25px;
+    padding-left: 20px;
+    color: #1F1E25;
+    margin-right: 50px;
+    height: 50px;
+}
+
+.add-item-input:hover {
+    cursor: url('assets/CursorCaret.svg'), auto;
+}
+
+/* 
+    To remove the outline when the input is focused
+    Reference: https://stackoverflow.com/questions/1457849/how-to-remove-the-border-highlight-on-an-input-text-element
+*/
+
+.add-item-input:focus {
+    outline-width: 0;
+}
+
+input[type="text" i] {
+    padding: 0px 0px 0px 20px;
+    vertical-align: top;
+}
+
+.add-description-input {
+    font-family: "Montserrat";
+    font-size: 16px;
+    border: 1px solid #F0DAE2;
+    border-radius: 25px;
+    padding-left: 20px;
+    color: #1F1E25;
+    margin-right: 50px;
+    height: 200px;
+    padding-top: 20px;
+}
+
+.add-description-input:hover {
+    cursor: url('assets/CursorCaret.svg'), auto;
+}
+
+/* 
+    To remove the outline when the input is focused
+    Reference: https://stackoverflow.com/questions/1457849/how-to-remove-the-border-highlight-on-an-input-text-element
+*/
+
+.add-description-input:focus {
+    outline-width: 0;
+}
+
+#add-item-img {
+    display: inline;
+    height: 100px;
+    padding: 20px;
+}
+
+.add-order-input {
+    font-family: "Montserrat";
+    font-size: 16px;
+    border: 1px solid #F0DAE2;
+    border-radius: 25px;
+    padding-left: 20px;
+    color: #1F1E25;
+    margin-right: 50px;
+    padding-top: 20px;
+    align-self: center;
+}
+
+.add-order-input {
+    outline-width: 0;
+}
+
+select {
+    font-family: "Montserrat";
+    font-size: 16px;
+    border: 1px solid #F0DAE2;
+    border-radius: 25px;
+    padding-left: 20px;
+    color: #6A6875;
+    margin-right: 50px;
+    height: 60px;
+    cursor: url('/styles/assets/CursorCrosshair.svg');
+    text-align: center;
+}
+
+select:focus {
+    outline-width: 0;
+}
+
+option {
+    font-family: "Montserrat";
+    font-size: 16px;
+    color: #1F1E25;
+    vertical-align: middle;
+}
+
+h6 {
+    margin: 0;
+    font-family: "Montserrat";
+    font-size: 16px;
+    color: #FF1369;
+    padding-top: 6px;
+}
+
+
+.change-item-input {
+    font-family: "Montserrat";
+    font-size: 16px;
+    border: 1px solid #F0DAE2;
+    border-radius: 25px;
+    padding-top: 10px;
+    padding-left: 20px;
+    color: #1F1E25;
+    margin-right: 50px;
+    height: 40px;
+    max-width: 337px;
+    max-height: 30px;
+    vertical-align: middle;
+}
+
+.change-item-input:hover {
+    cursor: url('assets/CursorCaret.svg'), auto;
+}
+
+/* 
+    To remove the outline when the input is focused
+    Reference: https://stackoverflow.com/questions/1457849/how-to-remove-the-border-highlight-on-an-input-text-element
+*/
+
+.change-item-input:focus {
+    outline-width: 0;
+}
+
+.change-description-input {
+    font-family: "Montserrat";
+    font-size: 16px;
+    border: 1px solid #F0DAE2;
+    border-radius: 25px;
+    padding-left: 20px;
+    color: #1F1E25;
+    margin-right: 50px;
+    height: 150px;
+    padding-top: 20px;
+}
+
+.change-description-input:hover {
+    cursor: url('assets/CursorCaret.svg'), auto;
+}
+
+.change-description-input:focus {
+    outline-width: 0;
+}

@@ -1,0 +1,298 @@
+/*
+    Developer's Note    
+    The fonts used in this styles folder are for personal use. 
+    Kindly refrain from sharing the fonts.
+    Wasn't able to animate the transitions for the menu pages (it should slide in and out).
+    Wasn't able to create an icon library or a design system on short notice, 
+        hence the poor design system and lots of icon assets in the folder.
+        hence the multiple CSS style sheets (yes, I'm embarrassed, it's very unorganized).
+*/
+
+@font-face {
+    font-family: "Specify";
+    src: url("fonts/SpecifyPERSONAL-ExpBlack.ttf");
+}
+
+@font-face {
+    font-family: "Specify Thin";
+    src: url("fonts/SpecifyPERSONAL-ExExpBold.ttf");
+}
+
+@font-face {
+    font-family: "Specify Bold";
+    src: url("fonts/SpecifyPERSONAL-ExpBold.ttf")
+}
+
+html {
+    cursor: url('assets/CursorRegular.svg'), auto;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 1fr 4fr 1fr;
+    grid-template-areas:
+    "h1 logo h1"
+    "h2 main h2"
+    "h1 main h1";
+    margin: 5px;
+}
+
+h1 {
+    font-family: "Specify";
+    font-size: 24px;
+    color: #FF1369;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: #FF1369;
+}
+
+#navbar {
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+}
+
+h1:hover {
+    text-decoration: underline;
+    transition: 1s;
+}
+
+h2 {
+    font-family: "Specify Thin";
+    font-size: 14px;
+    color: #FF1369;
+    margin: 200px 0px 200px 0px;
+    padding: 0;
+}
+
+#left-h2 {
+    transform: rotate(-90deg);
+}
+
+#right-h2 {
+    transform: rotate(90deg);
+}
+
+.next-menu {
+    display: flex;
+    margin: auto;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 0px;
+}
+
+.next-menu:hover {
+    gap: 10px
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    height: 450px;
+    overflow: auto;
+}
+
+#pizza {
+    width:100%;
+    height: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.menu-item {
+    margin-top: 60px;
+    padding: 75px;
+}
+
+h3 {
+    font-family: "Specify Bold";
+    color: #FF1369;
+    text-align: center;
+    padding: 12px;
+}
+
+a:hover {
+    text-decoration: underline;
+    color:#FF1369;
+    cursor: url('assets/CursorCrosshair.svg'), auto;
+}
+
+p {
+    font-family: "Montserrat";
+    color: #1F1E25;
+    font-size: 14px;
+    padding: 2px 20px;
+    margin: auto;
+}
+
+#scroll {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    gap: 20px;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    width: 1px;
+    background: #FF1369;
+    border-radius: 25px;
+}
+
+.customer a {
+    display: contents;
+}
+
+.customer {
+    display: grid;
+    grid-template-columns: 2;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "img h4"
+    "order-items order-item-quantity"
+    "button button"
+    "button button";
+    width: 300px;
+    height: 350px;
+    border: 1px solid #F0DAE2;
+    border-radius: 25px;
+    justify-content: baseline;
+}
+
+.customer:hover {
+    transition-timing-function: ease-in-out;
+    transition: 1s;
+    box-shadow: 20px 20px 50px #F5EEF1;
+}
+
+.customer1 {
+    padding: 16px;
+}
+
+h4 {
+    font-family: "Specify Bold";
+    font-size: 20px;
+    color:#FF1369;
+    padding-right: 16px;
+}
+
+.order-items {
+    gap: 10px;
+}
+
+.order-item-quantity {
+    gap: 10px;
+}
+
+.item {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 2fr 1fr 3fr 1fr;
+    width: 300px;
+    height: 350px;
+    border: 1px solid #F0DAE2;
+    border-radius: 25px;
+    justify-content: baseline;
+}
+
+.item:hover {
+    transition-timing-function: ease-in-out;
+    transition: 1s;
+    box-shadow: 20px 20px 50px #F5EEF1;
+}
+
+.item-img {
+    display: block;
+    width: 90px;
+    margin: auto;
+    grid-row-start: 1;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    padding: 30px 20px 10px 40px;
+}
+
+.item-description {
+    margin: auto;
+    padding: 0px 40px 0px 40px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+
+h5 {
+    margin: 0;
+    font-family: "Specify Bold";
+    font-size: 16px;
+    color:#FF1369;
+    text-align: left;
+    align-self: end;
+    padding: 0px 40px 4px 0px;
+}
+
+h6 {
+    margin: 0;
+    font-family: "Montserrat";
+    font-size: 16px;
+    color: #FF1369;
+    padding-top: 6px;
+}
+
+.order {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 1fr 3fr 1fr;
+    width: 300px;
+    height: 350px;
+    border: 1px solid #F0DAE2;
+    border-radius: 25px;
+    justify-items: middle;
+}
+
+.order-customer-img {
+    display: block;
+    width: 90px;
+    margin: auto;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    padding-top: 10px;
+}
+
+.order:hover {
+    transition-timing-function: ease-in-out;
+    transition: 1s;
+    box-shadow: 20px 20px 50px #F5EEF1;
+}
+
+.order-date {
+    margin: auto;
+    font-family: "Montserrat";
+    font-size: 14px;
+    color: #FF1369;
+    padding: 0px 40px 0px 40px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+#middle-h {
+    font-family: "Specify Bold";
+    font-size: 20px;
+    color:#FF1369;
+    padding: 16px;
+    text-align: center;
+}
+
+.customer-details {
+    font-family: "Montserrat";
+    color: #1F1E25;
+    font-size: 14px;
+    padding: 2px 20px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
